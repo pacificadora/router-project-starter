@@ -3,7 +3,7 @@ import frameImage from '../assets/frame.png'
 import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
 
-const Template = ({title, desc1, desc2, image, formType, setIsLoggedIn   }) => {
+const Template = ({title, desc1, desc2, image, formType, setUserLoggedIn   }) => {
   return (
     <div>
         <div>
@@ -14,8 +14,8 @@ const Template = ({title, desc1, desc2, image, formType, setIsLoggedIn   }) => {
             </p>
 
             {formType === "signup" ? 
-                (<SignupForm></SignupForm>) : 
-                (<LoginForm></LoginForm>)} 
+            (<SignupForm setUserLoggedIn={setUserLoggedIn}></SignupForm>) : 
+                (<LoginForm setUserLoggedIn={setUserLoggedIn}></LoginForm>)} 
             
             <div>
                 <div></div>
